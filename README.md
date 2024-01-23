@@ -22,8 +22,7 @@ yarn add @nestjs/cli
 
 4. Start database
 
-- Check template variables **.env.template** and rename it to **.env**
-- Fill variables
+- Fill environmental variables **.env**
 
 ```
 
@@ -46,12 +45,9 @@ Get to http://localhost:3000/api/v2/seed
 
 ```
 
-8. Available endpoints in the terminal
-
 ## Stack
 
 - Mongo DB
 - TablePlus UI to view Database details
 - NestJS v9.0.0
 - Express v4.17.13
-- Nodejs v18.15.11
