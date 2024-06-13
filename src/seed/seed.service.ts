@@ -10,13 +10,13 @@ export class SeedService {
   constructor(
     @InjectModel(Pokemon.name)
     private readonly pokemonModel: Model<Pokemon>,
-    private readonly http: AxiosAdapter,
+    private readonly axios: AxiosAdapter,
   ) {}
 
   async executeSeed() {
     await this.pokemonModel.deleteMany({});
 
-    const data = await this.http.get<PokeResponse>(
+    const data = await this.axios.get<PokeResponse>(
       'https://pokeapi.co/api/v2/pokemon?limit=2000',
     );
 
